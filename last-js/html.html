@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>割り勘アプリ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      input,
+      button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 80%;
+      }
+      .result {
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>割り勘しよう</h2>
+      <label>総額 (円):</label>
+      <input type="number" id="total" placeholder="例: 5000" />
+
+      <label>人数:</label>
+      <input type="number" id="people" placeholder="例: 3" />
+
+      <label>割合 (1人が払う倍数, カンマ区切り):</label>
+      <input type="text" id="ratios" placeholder="例: 1,1,2" />
+
+      <button onclick="calculate()">計算する</button>
+      <button onclick="clearFields()">クリア</button>
+
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="js.js"></script>
+  </body>
+</html>
